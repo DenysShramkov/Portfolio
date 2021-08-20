@@ -1,0 +1,32 @@
+.container-main
+	display: grid
+	position: relative
+	grid-template: "promo" minmax(320px, 100vh) "about-myself" auto "expirience" auto "tech" auto "portfolio" auto "price" auto "contacts" auto / 1140px
+	justify-content: center
+	row-gap: 120px
+	&:before
+		content: ''
+		position: absolute
+		background: linear-gradient(#0acde7f1, #0acde7f1,), url(../img/main_bg.png) center (center/cover) no-repeat
+
+		width: 100%
+		min-height: 320px
+		height: 100vh
+		z-index: -1
+
+@media ( max-width: 1199.98px )
+	.column-size-media
+		grid-template-columns: 960px
+
+@media ( max-width: 991.98px )
+	.column-size-media
+		grid-template-columns: 720px
+		
+@media ( max-width: 767.98px )
+	.column-size-media
+		grid-template-columns: 540px
+		row-gap: 60px
+
+@media ( max-width: 575.98px )
+	.column-size-media
+		grid-template-columns: 90vw

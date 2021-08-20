@@ -1,0 +1,59 @@
+.about
+	grid-area: about-myself
+	display: grid
+	grid-template: "photo header-container" max-content "photo descr" max-content "photo skills" min-content / 35% 1fr
+	column-gap: 60px
+	padding-right: 9%
+	&__photo
+		grid-area: photo
+		width: 100%
+	&__header-container
+		grid-area: header-container
+		position: relative
+		padding-top: 6px
+		&::after
+			@include divider
+	&__descr
+		grid-area: descr
+		margin-top: 20px
+		font-size: 14px
+	&__skills
+		grid-area: skills
+		display: grid
+		align-self: start
+		grid-template-columns: 1fr 1fr
+		grid-auto-flow: row
+		gap: 20px 30px
+		list-style: none
+		padding: 0
+		margin-top: 4em
+
+	
+@media ( max-width: 1199.98px )
+	.about
+		padding-right: 0
+
+@media ( max-width: 991.98px )
+	.about
+		grid-template: "photo header-container" max-content "photo descr" min-content "skills skills" auto / 40% 1fr
+		column-gap: 30px
+		&__descr
+			align-self: start
+		&__photo
+			width: 100%
+			height: 400px
+			object-fit: cover
+			object-position: center center
+
+@media ( max-width: 767.98px )
+	.about
+		grid-template: "header-container header-container" max-content "photo descr" min-content "skills skills" auto / 1fr 1fr
+		row-gap: 30px
+		&__descr
+			margin-top: 0
+
+@media ( max-width: 575.98px )
+	.about
+		grid-template: "header-container" auto "photo" auto "descr" auto "skills" auto / 100%
+		&__skills
+			grid-template-columns: 100%

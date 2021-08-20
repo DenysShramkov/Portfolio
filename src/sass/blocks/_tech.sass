@@ -1,0 +1,24 @@
+.tech
+	grid-area: tech
+	&__container
+		margin-top: 6em
+		display: grid
+		grid-template: 270px / repeat(auto-fill, 270px)
+		grid-auto-rows: 270px
+		gap: 10px 10px
+		justify-content: center
+	&__progress
+		margin-top: 12em
+		display: grid
+		grid-template-columns: repeat(auto-fill, 350px)
+		gap: 30px 45px
+		justify-content: center
+
+@media ( max-width: 575.98px )
+	.tech
+		&__progress
+			grid-template-columns: repeat(auto-fill, 280px)
+
+	
+
+	

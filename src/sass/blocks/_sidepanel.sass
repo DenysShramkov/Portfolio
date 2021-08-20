@@ -1,0 +1,35 @@
+.sidepanel
+	position: fixed
+	display: flex
+	flex-direction: column
+	align-items: center
+	left: -30px
+	top: 35%
+	&__social-links
+		&:nth-child(n+2)
+			margin-top: 15px				
+	&__line
+		height: 70px
+		border: solid 1px black
+		margin: 15px 0
+		&.disabled
+			display: none
+	&__text
+		transform: rotate(-90deg) translateX(-45%)
+		font-size: 16px
+		font-weight: 700
+		line-height: 24px
+		&.disabled
+			display: none
+	&__menu
+		z-index: 3
+		top: calc( 100vh - 100px )
+		left: -100px
+		transition: all 0.6s
+		transform: translateX(260px) rotate( 90deg )
+	
+@media ( max-width: 1399.98px )
+	.sidepanel
+		left: -100%
+	.visible
+		left: -100px

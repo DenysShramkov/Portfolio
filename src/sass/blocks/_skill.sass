@@ -1,0 +1,29 @@
+.skill
+	display: grid
+	grid-template: " container title " max-content " container descr " max-content / 60px auto
+	position: relative
+	&__title
+		grid-area: title
+		font-size: 14px
+		font-weight: 700
+	&__subtitle
+		font-size: 12px
+	&__descr
+		grid-area: descr
+		margin-top: 6px
+		font-size: 12px
+	&__container
+		grid-area: container
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			@include orange-circle
+	&__img
+		transform: translate( 15px, 15px )
+		
+
+.expirience
+	.skill
+		grid-template: " container title " max-content " descr descr " max-content / 60px auto
+		margin-top: 45px

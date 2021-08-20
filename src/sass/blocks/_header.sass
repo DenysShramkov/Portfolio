@@ -1,0 +1,46 @@
+.header__descr
+	font-size: 16px
+	font-weight: 700
+	line-height: 24px
+	position: relative
+	text-align: center
+	z-index: 1
+	&::before
+		@include orange-circle
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+.header, .header__main
+	font-weight: 700
+	text-align: center
+
+.header__main
+	font-size: 4.8em
+	line-height: 1.2em
+
+.header
+	position: relative
+	font-size: 3.6em
+	line-height: 90px
+
+.header__line
+	&::after
+		@include divider
+		margin: 0 auto
+
+.header__start
+	text-align: left
+
+.header__circle-start
+	text-align: left
+	display: inline
+	margin-left: 14.4px
+	&::before
+		left: 0
+		transform: translate(-40%, -50%)
+	&:hover
+		&::before
+			animation: rolling 1.5s ease-in-out 2 alternate

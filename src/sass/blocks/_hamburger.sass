@@ -1,0 +1,23 @@
+.hamburger
+	position: fixed
+	top: 20px
+	right: 30px
+	width: 36px
+	height: 21px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: flex-end
+	cursor: pointer
+	z-index: 10
+	&__line
+		width: 30px
+		height: 3px
+		background-color: #151812
+		&:nth-child( 2 )
+			width: 36px
+			
+@media ( max-width: 575.98px)
+	.hamburger
+		top: 15px
+		right: 15px			

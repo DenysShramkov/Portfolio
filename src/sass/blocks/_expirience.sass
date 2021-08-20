@@ -1,0 +1,62 @@
+.expirience
+	grid-area: expirience
+	&__wrapper
+		position: relative
+		display: grid
+		grid-template: auto / 425px 425px
+		column-gap: 135px
+		justify-content: center
+		align-items: start
+		padding-top: 6em
+	&__column
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			height: 95%
+			width: 1px
+			background-color: #000
+			top: 10px
+			left: 0
+	&__title
+		position: relative
+		font-weight: 700
+		font-size: 20px
+		margin-left: 40px
+		&::before
+			content: ''
+			position: absolute
+			left: -40px
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			background-color: $main-color
+			transform: translate(-50%, 50%)
+	&__item
+		position: relative
+		padding-left: 40px
+		&::before
+			content: ''
+			position: absolute
+			height: 1px
+			width: 40px
+			background-color: #000
+			top: 18px
+			left: 0
+			
+@media ( max-width: 1199.98px )
+	.expirience
+		&__wrapper
+			grid-template: auto / 400px 400px
+			column-gap: 80px
+
+@media ( max-width: 991.98px )
+	.expirience
+		&__wrapper
+			grid-template: auto / 70vw
+			row-gap: 40px
+
+@media ( max-width: 575.98px )
+	.expirience
+		&__wrapper
+			grid-template: auto / 90vw
